@@ -9,8 +9,9 @@ module.exports = {
     return {
       "/": { page: "/" },
       "/angebote": { page: "/angebote" },
-      "/kontakt": { page: "/kontakt" },
       "/referenzen": { page: "/referenzen" },
+      "/faq": { page: "/faq" },
+      "/kontakt": { page: "/kontakt" },
     };
   },
   //assetPrefix: '',
