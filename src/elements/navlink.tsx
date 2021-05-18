@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const Navlink: FC<Props> = ({ href, active, children }) => (
-  <Link href={href}>
+  <Link passHref href={href}>
     <a
       className={`text-xl hover:text-gold transition-colors ${
         active ? "text-gold" : "text-white"

@@ -1,4 +1,4 @@
-import { Heading1 } from "../elements/heading1";
+import { Heading1 } from "../typography/heading1";
 
 export default function Referenzen() {
   return (

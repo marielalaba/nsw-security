@@ -2,17 +2,16 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { Navlink } from "../elements/navlink";
-
-const ANGEBOTE = "/angebote";
-
-const REFERENZEN = "/referenzen";
-const FAQ = "/faq";
-const KONTAKT = "/kontakt";
+import {
+  ANGEBOTE,
+  FAQ,
+  KONTAKT,
+  REFERENZEN,
+  routeIsActive,
+} from "../routing/routes";
 
 export const Header = () => {
   const router = useRouter();
-
-  const isActive = (route: string) => router.pathname === route;
 
   return (
     <div className="w-full flex justify-between bg-darkblue py-6 px-8">
@@ -24,16 +23,16 @@ export const Header = () => {
         </a>
       </Link>
       <nav className="flex items-center gap-8">
-        <Navlink active={isActive(ANGEBOTE)} href={ANGEBOTE}>
+        <Navlink active={routeIsActive(router, ANGEBOTE)} href={ANGEBOTE}>
           Angebote
         </Navlink>
-        <Navlink active={isActive(REFERENZEN)} href={REFERENZEN}>
+        <Navlink active={routeIsActive(router, REFERENZEN)} href={REFERENZEN}>
           Referenzen
         </Navlink>
-        <Navlink active={isActive(FAQ)} href={FAQ}>
+        <Navlink active={routeIsActive(router, FAQ)} href={FAQ}>
           FAQ
         </Navlink>
-        <Navlink active={isActive(KONTAKT)} href={KONTAKT}>
+        <Navlink active={routeIsActive(router, KONTAKT)} href={KONTAKT}>
           Kontakt
         </Navlink>
       </nav>
