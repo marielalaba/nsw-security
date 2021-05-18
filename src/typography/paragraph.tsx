@@ -1,3 +1,7 @@
 import React, { FC } from "react";
 
-export const Paragraph: FC = ({ children }) => <p className="">{children}</p>;
+type Props = {
+    className?: string
+};
+
+export const Paragraph: FC<Props> = ({ children , className }) => <p className={className}>{children}</p>;
