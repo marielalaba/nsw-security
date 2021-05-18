@@ -10,8 +10,8 @@ export const ImageTeaser: FC<Props> = ({
   imgSrc,
   imgDescription = "",
 }) => (
-  <div className="flex gap-4">
+  <div className="inline-grid grid-rows-2 gap-4">
     <img src={imgSrc} alt={imgDescription} />
-    <div>{children}</div>
+    <div className="content-center">{children}</div>
   </div>
 );
