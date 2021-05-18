@@ -1,10 +1,14 @@
 # NSW Security
 
-## Getting Started
+### Install dependencies
 
-Run the development server:
+```jsx
+npm install
+```
 
-```bash
+### Run the development server
+
+```jsx
 npm run dev
 ```
 
